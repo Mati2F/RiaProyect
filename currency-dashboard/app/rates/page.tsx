@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getRates } from "@/lib/api";
 import { CurrencySelect } from "@/components/currencySelect";
+import Link from "next/link";
 
 export default function RatesPage() {
   const [base, setBase] = useState("USD");
@@ -33,6 +34,16 @@ export default function RatesPage() {
             </div>
           ))}
         </div>
+
+        <div className="flex flex-col items-center mt-8">
+          <Link
+            href="/"
+            className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+          >
+            Go back
+          </Link>
+        </div>
+
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { convertCurrency } from "@/lib/api";
 import { CurrencySelect } from "@/components/currencySelect";
 import { RateStatsCard } from "@/components/rateStatsCard";
+import Link from "next/link";
 
 export default function Home() {
   const [amount, setAmount] = useState<string>("");
@@ -170,6 +171,17 @@ export default function Home() {
         )}
 
         <RateStatsCard from={from} to={to} />
+
+        <div className="flex flex-col items-center mt-8">
+      
+          <Link
+            href="/rates"
+            className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+          >
+            View Rates
+          </Link>
+
+        </div>
       </div>
     </div>
   );
