@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getRates } from "@/lib/api";
-import { CurrencySelect } from "../../components/currencySelect";
+import { CurrencySelect } from "@/components/currencySelect";
 
 export default function RatesPage() {
   const [base, setBase] = useState("USD");

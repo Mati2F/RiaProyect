@@ -24,7 +24,7 @@ export function CurrencySelect({ value, onChange }: Props) {
     >
       {Object.entries(currencies).map(([code, name]) => (
         <option key={code} value={code}>
-          {code} – {name}
+          {code} - {name}
         </option>
       ))}
     </select>
